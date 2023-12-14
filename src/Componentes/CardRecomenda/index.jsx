@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Titulo } from "../Titulo";
+import React, { useState } from "react";
 
 const Card = styled.div`
   background-color: #fff;
@@ -21,6 +22,7 @@ const Botao = styled.button`
   margin-right: 11px;
   font-weight: 900;
   display: block;
+  justify-content: center;
   text-align: center;
   width: 150px;
 
@@ -31,6 +33,7 @@ const Botao = styled.button`
 
 const Descricao = styled.p`
   max-width: 280px;
+  width: 90%;
 `;
 
 const Subtitulo = styled.h4`
@@ -43,10 +46,53 @@ const Subtitulo = styled.h4`
 const ImgLivro = styled.img`
   width: 150px;
   margin-right: 11px;
+  cursor: pointer;
 `;
 
-function CardRecomenda({ titulo, subtitulo, descricao, imagensLivros }) {
+const Modal = styled.div`
+  display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+`;
+
+const ModalContent = styled.div`
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 20px;
+  width: 20%;
+`;
+
+const BotaoFechar = styled.button`
+  background-color: #eb9b00;
+  color: #fff;
+  padding: 5px 15px;
+  font-size: 16px;
+  border: none;
+  margin-top: 15px;
+  font-weight: 900;
+  cursor: pointer;
+`;
+
+function CardRecomenda({ titulo, subtitulo, descricao, imagensLivros, subDescricao }) {
+  const [modalAberto, setModalAberto] = useState(false);
+
+  const abrirModal = () => {
+    setModalAberto(true);
+  };
+
+  const fecharModal = () => {
+    setModalAberto(false);
+  };
+
   return (
+    <>
     <Card>
       <div>
         <Titulo tamanhoFonte="16px" cor="#730d4a" alinhamento="left">
@@ -60,9 +106,17 @@ function CardRecomenda({ titulo, subtitulo, descricao, imagensLivros }) {
           src={imagensLivros}
           style={{ width: "150px", height: "150px" }}
         />
-        <Botao>Saiba mais</Botao>
+        <Botao onClick={abrirModal}>Saiba mais</Botao>
       </div>
     </Card>
+    <Modal isOpen={modalAberto} onClick={fecharModal}>
+        <ModalContent>
+          <Subtitulo>{subtitulo}</Subtitulo>
+          <Descricao>{subDescricao || descricao}</Descricao>
+          <BotaoFechar onClick={fecharModal}>Fechar</BotaoFechar>
+        </ModalContent>
+    </Modal>
+    </>
   );
 }
 

@@ -59,14 +59,18 @@ function UltimosLancamentos() {
       <NovosCards>
         <CardRecomenda
           titulo="Talvez você se interesse por"
-          subtitulo="Angular 11"
-          descricao="Construindo uma aplicação com a plataforma Google"
+          subtitulo="Angular 11 e Firebase"
+          descricao="Construindo uma aplicação integrada com a plataforma do Google"
+          subDescricao="Em aplicações web e mobile, a vasta gama de linguagens e ferramentas pode gerar dúvidas sobre o caminho a seguir. O livro destaca o Angular, uma plataforma facilitadora que combina templates, injeção de dependências e práticas de desenvolvimento. Kheronn Machado explora o Angular 11, abordando componentes, serviços, roteamentos e validação de formulários. O autor também demonstra a integração com o Firebase, do Google, incluindo recursos como banco de dados, autenticação e armazenamento de arquivos, proporcionando uma visão abrangente do desenvolvimento com Angular."
           imagensLivros={imagensLivros.livro06}
         />
         <CardRecomenda
           titulo="Talvez você se interesse por"
           subtitulo="Typescript"
           descricao="Construindo uma aplicação em Typescript com Styled-Components"
+          subDescricao="Desenvolvido e mantido pela Microsoft, o TypeScript é um pré-processador open source de códigos JavaScript que auxilia na escrita de códigos, desde os mais simples até os mais complexos, utilizando tipagem de dados e os princípios da Orientação a Objetos para o desenvolvimento de aplicações front-end, back-end e mobile.
+
+          Neste livro, Thiago da Silva Adriano abordará conceitos básicos do TypeScript, como tipagem básica, interfaces, decorators e Generics. Você vai aprender já com as mãos na massa, acompanhando o passo a passo desde a instalação do pré-processador até o desenvolvimento de uma API fazendo uso de tecnologias como Node.js, o banco de dados MongoDB e contêineres Docker."
           imagensLivros={imagensLivros.livro11}
         />
       </NovosCards>

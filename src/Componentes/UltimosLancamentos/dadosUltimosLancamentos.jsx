@@ -27,7 +27,7 @@ export const livros = [
     src: imagensLivros.livro01,
   },
   {
-    nome: "Crie aplicações com Angular",
+    nome: "Angular 11 e Firebase",
     id: 6,
     src: imagensLivros.livro06,
   },
