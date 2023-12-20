@@ -12,7 +12,6 @@ const UltimosLancamentosContainer = styled.section`
 `;
 
 const NovosLivrosContainer = styled.div`
-<<<<<<< HEAD
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3px;
@@ -23,19 +22,6 @@ const NovosLivrosContainer = styled.div`
   @media (max-width: 720px) {
     grid-template-columns: repeat(2, 1fr);
   }
-=======
-  display: flex;
-  grid-template-columns: repeat(4, 1fr);
-  max-width: 100%;
-  flex-wrap: wrap-reverse;
-  box-sizing: border-box;
-  justify-content: space-around;
-  padding-left: 1px;
-  gap: 2px;
-  margin-left: 6px;
-  margin-bottom: 0.3px;
-  cursor: pointer;
->>>>>>> 6727b37d63182ee38ee5258b417e0a57b34176d4
 `;
 
 const NovidadesDiv = styled.div`
@@ -59,11 +45,7 @@ function UltimosLancamentos() {
         </Titulo>
         <NovosLivrosContainer>
           {livros.map((livro) => (
-<<<<<<< HEAD
             <img alt=""
-=======
-            <img
->>>>>>> 6727b37d63182ee38ee5258b417e0a57b34176d4
               src={livro.src}
               style={{
                 width: imagensLivros.larguraPadrao,
