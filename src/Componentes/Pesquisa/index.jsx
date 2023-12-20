@@ -68,7 +68,11 @@ function Pesquisa() {
       />
       {livrosPesquisados.map((livro) => (
         <Resultado>
+<<<<<<< HEAD
           <img alt="" src={livro.src} />
+=======
+          <img src={livro.src} />
+>>>>>>> 6727b37d63182ee38ee5258b417e0a57b34176d4
           <p>{livro.nome}</p>
         </Resultado>
       ))}

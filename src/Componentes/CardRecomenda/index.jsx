@@ -11,10 +11,13 @@ const Card = styled.div`
   flex-wrap: wrap;
   width: 95%;
   height: 189px;
+<<<<<<< HEAD
 
   @media screen and (max-width: 720px) {
     height: 393px;
     }
+=======
+>>>>>>> 6727b37d63182ee38ee5258b417e0a57b34176d4
 `;
 
 const Botao = styled.button`
@@ -54,6 +57,7 @@ const ImgLivro = styled.img`
 `;
 
 const Modal = styled.div`
+<<<<<<< HEAD
 display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
 position: fixed;
 top: 0;
@@ -81,6 +85,25 @@ width: auto;
   max-width: 100%;
   font-size: 14.5px;
 }
+=======
+  display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+`;
+
+const ModalContent = styled.div`
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 20px;
+  width: 20%;
+>>>>>>> 6727b37d63182ee38ee5258b417e0a57b34176d4
 `;
 
 const BotaoFechar = styled.button`
